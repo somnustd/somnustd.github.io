@@ -20,17 +20,17 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="在Go语言里，数组是一个长度固定的数据类型，用于存储一段具有相同的类型的元素的连续块。数组存储的类型可以是内置类型，如整型或者字符串，也可以是某种结构类型。  1、声明方式 : 123456789var array [5]int   一旦声明，数组里存储的数据类型和数组长度就都不能改变了  array := [5]int&amp;#123;10, 20, 30, 40, 50&amp;#125;    使用数组">
+  <meta name="description" content="在Go语言里，数组是一个长度固定的数据类型，用于存储一段具有相同的类型的元素的连续块。数组存储的类型可以是内置类型，如整型或者字符串，也可以是某种结构类型。  1、声明方式 : var array [5]int   //一旦声明，数组里存储的数据类型和数组长度就都不能改变了  array := [5]int&amp;#123;10, 20, 30, 40, 50&amp;#125;    //使用数组字面量声明">
 <meta property="og:type" content="article">
 <meta property="og:title" content="go语言实站 | 数组">
 <meta property="og:url" content="http://yoursite.com/go语言实站-数组/index.html">
 <meta property="og:site_name" content="丁丁爱吃肉">
-<meta property="og:description" content="在Go语言里，数组是一个长度固定的数据类型，用于存储一段具有相同的类型的元素的连续块。数组存储的类型可以是内置类型，如整型或者字符串，也可以是某种结构类型。  1、声明方式 : 123456789var array [5]int   一旦声明，数组里存储的数据类型和数组长度就都不能改变了  array := [5]int&amp;#123;10, 20, 30, 40, 50&amp;#125;    使用数组">
+<meta property="og:description" content="在Go语言里，数组是一个长度固定的数据类型，用于存储一段具有相同的类型的元素的连续块。数组存储的类型可以是内置类型，如整型或者字符串，也可以是某种结构类型。  1、声明方式 : var array [5]int   //一旦声明，数组里存储的数据类型和数组长度就都不能改变了  array := [5]int&amp;#123;10, 20, 30, 40, 50&amp;#125;    //使用数组字面量声明">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-20T05:05:56.039Z">
+<meta property="og:updated_time" content="2020-05-20T05:25:19.621Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="go语言实站 | 数组">
-<meta name="twitter:description" content="在Go语言里，数组是一个长度固定的数据类型，用于存储一段具有相同的类型的元素的连续块。数组存储的类型可以是内置类型，如整型或者字符串，也可以是某种结构类型。  1、声明方式 : 123456789var array [5]int   一旦声明，数组里存储的数据类型和数组长度就都不能改变了  array := [5]int&amp;#123;10, 20, 30, 40, 50&amp;#125;    使用数组">
+<meta name="twitter:description" content="在Go语言里，数组是一个长度固定的数据类型，用于存储一段具有相同的类型的元素的连续块。数组存储的类型可以是内置类型，如整型或者字符串，也可以是某种结构类型。  1、声明方式 : var array [5]int   //一旦声明，数组里存储的数据类型和数组长度就都不能改变了  array := [5]int&amp;#123;10, 20, 30, 40, 50&amp;#125;    //使用数组字面量声明">
 
 <link rel="canonical" href="http://yoursite.com/go语言实站-数组/">
 
@@ -176,7 +176,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-20 13:05:56" itemprop="dateModified" datetime="2020-05-20T13:05:56+08:00">2020-05-20</time>
+                <time title="修改时间：2020-05-20 13:25:19" itemprop="dateModified" datetime="2020-05-20T13:25:19+08:00">2020-05-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -203,14 +203,14 @@
 <p>在Go语言里，数组是一个长度固定的数据类型，用于存储一段具有相同的类型的元素的连续块。数组存储的类型可以是内置类型，如整型或者字符串，也可以是某种结构类型。</p>
 </blockquote>
 <p><strong>1、声明方式 :</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var array [5]int   一旦声明，数组里存储的数据类型和数组长度就都不能改变了  </span><br><span class="line"></span><br><span class="line">array := [5]int&#123;10, 20, 30, 40, 50&#125;    使用数组字面量声明数组</span><br><span class="line"></span><br><span class="line">array := [...]int&#123;10, 20, 30, 40, 50&#125;   自动计算声明数组的长度</span><br><span class="line"></span><br><span class="line">array := [5]int&#123;1: 10, 2: 20&#125;   声明数组并指定特定元素的值 </span><br><span class="line"></span><br><span class="line">var grid [4][5]int 		多维数组</span><br></pre></td></tr></table></figure>
+<figure class="highlight golang"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> array [<span class="number">5</span>]<span class="keyword">int</span>   <span class="comment">//一旦声明，数组里存储的数据类型和数组长度就都不能改变了  </span></span><br><span class="line"></span><br><span class="line">array := [<span class="number">5</span>]<span class="keyword">int</span>&#123;<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>&#125;    <span class="comment">//使用数组字面量声明数组</span></span><br><span class="line"></span><br><span class="line">array := [...]<span class="keyword">int</span>&#123;<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>&#125;   <span class="comment">//自动计算声明数组的长度</span></span><br><span class="line"></span><br><span class="line">array := [<span class="number">5</span>]<span class="keyword">int</span>&#123;<span class="number">1</span>: <span class="number">10</span>, <span class="number">2</span>: <span class="number">20</span>&#125;   <span class="comment">//声明数组并指定特定元素的值 </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> grid [<span class="number">4</span>][<span class="number">5</span>]<span class="keyword">int</span> 		<span class="comment">//多维数组</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>2、数组的遍历  :</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">遍历数组时,一般大家会想到:</span><br><span class="line">for i:=0;i&lt;len(array);i++ &#123;</span><br><span class="line">	fmt.Println(array[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight golang"><table><tr><td class="code"><pre><span class="line"><span class="comment">//遍历数组时,一般大家会想到:</span></span><br><span class="line"><span class="keyword">for</span> i:=<span class="number">0</span>;i&lt;<span class="built_in">len</span>(array);i++ &#123;</span><br><span class="line">	fmt.Println(array[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">但是 go语言一般是这样做:</span><br><span class="line">for i , v := range array&#123;</span><br><span class="line">	fmt.Println(i.v)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">如果不要下标,只要数值,可以这样做:</span><br><span class="line">for _ , v := range array&#123;</span><br><span class="line">	fmt.Println(v)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight golang"><table><tr><td class="code"><pre><span class="line"><span class="comment">//但是 go语言一般是这样做:</span></span><br><span class="line"><span class="keyword">for</span> i , v := <span class="keyword">range</span> array&#123;</span><br><span class="line">	fmt.Println(i.v)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果不要下标,只要数值,可以这样做:</span></span><br><span class="line"><span class="keyword">for</span> _ , v := <span class="keyword">range</span> array&#123;</span><br><span class="line">	fmt.Println(v)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">举个栗子 求数组中最大值:</span><br><span class="line">numbers := [6]int&#123;4,7,2,6,9,8&#125;</span><br><span class="line">maxi := -1</span><br><span class="line">maxValue := -1</span><br><span class="line">for i,v := range numbers&#123;</span><br><span class="line">	if v &gt; maxValue &#123;</span><br><span class="line">		maxi , maxValue = i , v</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">fmt.Println( maxi , maxValue)</span><br></pre></td></tr></table></figure>
+<figure class="highlight golang"><table><tr><td class="code"><pre><span class="line"><span class="comment">//举个栗子 求数组中最大值:</span></span><br><span class="line">numbers := [<span class="number">6</span>]<span class="keyword">int</span>&#123;<span class="number">4</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">8</span>&#125;</span><br><span class="line">maxi := <span class="number">-1</span></span><br><span class="line">maxValue := <span class="number">-1</span></span><br><span class="line"><span class="keyword">for</span> i,v := <span class="keyword">range</span> numbers&#123;</span><br><span class="line">	<span class="keyword">if</span> v &gt; maxValue &#123;</span><br><span class="line">		maxi , maxValue = i , v</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">fmt.Println( maxi , maxValue)</span><br></pre></td></tr></table></figure>
 
 <ol>
 <li>可通过_ 省略变量</li>
@@ -219,11 +219,11 @@
 </ol>
 <p><strong>3、数组是值类型</strong></p>
 <p>go语言 中一般不直接使用数组 , 也不是指针(麻烦) , 而是使用切片</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">func main()&#123;</span><br><span class="line">	arr1 := [5]int&#123;&#125;</span><br><span class="line">	arr2 := [3]int&#123;3,6,9&#125;</span><br><span class="line">	arr3 := [...]int&#123;6,2,8,4,7&#125;</span><br><span class="line">	printArray(arr1)</span><br><span class="line">	printArray(arr2)</span><br><span class="line">	printArray(arr3)</span><br><span class="line">&#125;</span><br><span class="line"> func printArray(arr [5]int)  &#123;</span><br><span class="line">	for i,v := range arr&#123;</span><br><span class="line">		fmt.Println(i,v)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight golang"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	arr1 := [<span class="number">5</span>]<span class="keyword">int</span>&#123;&#125;</span><br><span class="line">	arr2 := [<span class="number">3</span>]<span class="keyword">int</span>&#123;<span class="number">3</span>,<span class="number">6</span>,<span class="number">9</span>&#125;</span><br><span class="line">	arr3 := [...]<span class="keyword">int</span>&#123;<span class="number">6</span>,<span class="number">2</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">7</span>&#125;</span><br><span class="line">	printArray(arr1)</span><br><span class="line">	printArray(arr2)</span><br><span class="line">	printArray(arr3)</span><br><span class="line">&#125;</span><br><span class="line"> <span class="function"><span class="keyword">func</span> <span class="title">printArray</span><span class="params">(arr [5]<span class="keyword">int</span>)</span></span>  &#123;</span><br><span class="line">	<span class="keyword">for</span> i,v := <span class="keyword">range</span> arr&#123;</span><br><span class="line">		fmt.Println(i,v)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>执行以上代码 , 会报以下错误:<br><font color="red">cannot use arr2 (type [3]int) as type [5]int in argument to printArray</font><br>go语言中 [3]int 和 [5]int 是不同的类型          </p>
 <hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">使用指针:</span><br><span class="line">func main()&#123;</span><br><span class="line">	arr1 := [5]int&#123;&#125;</span><br><span class="line">	printArray(&amp;arr1)</span><br><span class="line">&#125;</span><br><span class="line"> func printArray(arr *[5]int)  &#123;</span><br><span class="line">	arr[0] = 100</span><br><span class="line">	for i,v := range arr&#123;</span><br><span class="line">		fmt.Println(i,v)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight golang"><table><tr><td class="code"><pre><span class="line"><span class="comment">//使用指针:</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	arr1 := [<span class="number">5</span>]<span class="keyword">int</span>&#123;&#125;</span><br><span class="line">	printArray(&amp;arr1)</span><br><span class="line">&#125;</span><br><span class="line"> <span class="function"><span class="keyword">func</span> <span class="title">printArray</span><span class="params">(arr *[5]<span class="keyword">int</span>)</span></span>  &#123;</span><br><span class="line">	arr[<span class="number">0</span>] = <span class="number">100</span></span><br><span class="line">	<span class="keyword">for</span> i,v := <span class="keyword">range</span> arr&#123;</span><br><span class="line">		fmt.Println(i,v)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -243,7 +243,10 @@
     <a href="/go语言实战（一）/" rel="prev" title="go语言实战（一）">
       <i class="fa fa-chevron-left"></i> go语言实战（一）
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/go语言实战-切片/" rel="next" title="go语言实战 | 切片">
+      go语言实战 | 切片 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -314,13 +317,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -407,5 +410,5 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>
