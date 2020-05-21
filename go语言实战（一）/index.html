@@ -217,10 +217,10 @@
 <p>启动程序后 , 在浏览器地址栏上输入 <code>http://localhost:9090/?name=dingding</code><br>即可看到 <code>hello world dingding</code>  👌</p>
 <p>so easy</p>
 <h4 id="init函数"><a href="#init函数" class="headerlink" title="init函数"></a>init函数</h4><p>程序中每个代码文件里的 init 函数都会在 main 函数执行前调用。这个 init 函数将标准库里日志类的输出，从默认的标准错误（stderr），设置为标准输出（stdout）设备。每个包可以有多个init函数，同一个包的init执行顺序，golang没有明确定义，编程时要注意程序不要依赖这个执行顺序</p>
-<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">// init 在 main 之前调用</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span>  &#123;</span></span><br><span class="line">	<span class="built_in">log</span>.SetOutput(os.Stdout)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// init 在 main 之前调用</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span>  &#123;</span><br><span class="line">	log.SetOutput(os.Stdout)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>在 main 函数返回前，清理并终止所有之前启动的 goroutine。编写启动和终止时的状态都很清晰的程序，有助减少 bug，防止资源异常。</p>
-<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 构造一个 wait group，以便处理所有的数据源</span></span><br><span class="line"><span class="keyword">var</span> waitGroup <span class="keyword">sync</span>.WaitGroup</span><br><span class="line"><span class="comment">// 设置需要等待处理</span></span><br><span class="line"><span class="comment">// 每个数据源的 goroutine 的数量</span></span><br><span class="line">waitGroup.Add(len(feeds))</span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 构造一个 wait group，以便处理所有的数据源</span></span><br><span class="line"><span class="keyword">var</span> waitGroup sync.WaitGroup</span><br><span class="line"><span class="comment">// 设置需要等待处理</span></span><br><span class="line"><span class="comment">// 每个数据源的 goroutine 的数量</span></span><br><span class="line">waitGroup.Add(<span class="built_in">len</span>(feeds))</span><br></pre></td></tr></table></figure>
 
 <p>这个程序使用 sync 包的 WaitGroup 跟踪所有启动的 goroutine。非常推荐使用 WaitGroup 来<br>跟踪 goroutine 的工作是否完成。WaitGroup 是一个计数信号量，我们可以利用它来统计所有的<br>goroutine 是不是都完成了工作。</p>
 
